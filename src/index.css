@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    margin: 0;
+    min-width: 320px;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: 'Barlow Condensed', sans-serif; }
+
+  .text-stroke {
+    -webkit-text-stroke: 2px #CC1111;
+    color: transparent;
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+
+  .clip-diagonal-rev {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
